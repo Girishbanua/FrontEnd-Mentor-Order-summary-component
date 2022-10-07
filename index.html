@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Order summary card</title>
+
+  <style>     
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Red Hat Display',sans-serif;
+      font-size: 16px;
+    }
+    body {
+      background-image: url("images/pattern-background-desktop.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: hsl(225, 100%, 94%);
+    }
+    .container {
+      margin: 150px auto;
+      padding: auto;
+      max-width: 450px;
+      min-height: 700px;
+      background-color: white;
+      border-radius: 20px;      
+    }
+    #dancing-illstrtn { 
+      width: 100%;
+      height: 220px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      }
+      h2 {
+        font-size: 26px;
+        font-weight: 900;
+        color: hsl(223, 47%, 23%);
+      }
+      p {
+        color: hsl(224, 23%, 55%);
+        font-weight: 500;
+      }
+      #summary {
+        line-height: 1.5;
+      }
+    .summary-cancel {
+      margin: 50px;
+      text-align: center;      
+    }
+    .annual-change {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 30px;
+      border-radius: 10px;
+      background-color: hsl(225, 100%, 98%);
+      padding: 15px;
+    }
+    .annual {
+      display: flex;            
+      line-height: 1.5;
+    }
+    .annual img {
+      margin-right: 15px;
+    }
+    .annual span {
+      color: hsl(223, 47%, 23%);
+      font-weight: 900;
+    }
+    button {
+      color: white;
+      background-color: hsl(245, 75%, 52%);
+      width: 100%;
+      border-radius: 10px;
+      padding: 15px;
+      font-weight: 900;
+      border-style: none;   
+      margin-top: 50px;   
+    }
+    button:hover {
+      cursor: pointer;
+      background-color: hsla(245, 75%, 52%, 0.703);
+    }
+    .change {
+       font-weight: 700;
+       font-size: 14px;
+       color: hsl(245, 75%, 52%);
+       text-decoration: underline;
+      }
+      .change:hover {
+        cursor: pointer;
+        color: hsla(245, 75%, 52%, 0.703);
+        text-decoration: none;        
+      }
+    .cancel {
+      margin-top: 30px;
+      font-weight: 700;      
+    }    
+    .cancel:hover {
+      font-weight: 900;
+      color: hsl(223, 47%, 23%);
+      cursor: pointer;
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    @media screen and (max-width: 400px) {
+      body {
+        background-image: url("images/pattern-background-mobile.svg");
+      }
+      .container {
+        max-width: 330px;   
+        min-height: 550px;
+        margin: 70px 25px;                       
+      }
+      #dancing-illstrtn {
+        height: 150px;
+      }
+      .summary-cancel {
+      margin: 30px;           
+    }
+    h2 {
+        font-size: 22px;
+    }
+    p {
+      font-size: 16px;
+    }
+    .annual-change {      
+      padding: 5px;
+    }
+    button {
+      margin-top: 25px;
+    }
+    .cancel {
+      margin: 25px;
+    }
+    .attribution {
+      display: block;
+    }
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="container"> <!--The main container box or the CARD--> <!---->
+    
+    <img id="dancing-illstrtn" src="images/illustration-hero.svg" alt="illustration of a girl with headphones">
+
+    <!--Part Under the image -->
+
+    <div class="summary-cancel"> 
+      <!--Title and its summary--> 
+      <div class="description">
+        <h2>Order Summary</h2> <br>
+        <p id="summary">You can now listen to millions of songs, audiobooks, and podcasts on any 
+          device anywhere you like!</p>
+      </div>
+
+      <!--Box containing the music icon, price-texts and change hover effect-->
+      <div class="annual-change">        
+        <div class="annual">
+          <div><img src="images/icon-music.svg" alt="music icon"></div>          
+          <p><span>Annual Plan</span> <br>
+          $59.99/year</p>
+        </div> 
+        <div class="change">
+          Change
+        </div>        
+      </div>
+
+      <!--Proceed button-->      
+        <button id="payment">Proceed to Payment</button>      
+        <p class="cancel">Cancel Order</p>
+      
+    </div>
+    
+  </div>
+
+  <div class="attribution">
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. </p>
+    <p>Coded by <a href="#">Girish Chandra Banua</a>.</p>
+  </div>
+</body>
+</html>
